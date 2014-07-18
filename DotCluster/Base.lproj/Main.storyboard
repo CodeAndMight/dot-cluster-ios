@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Mh4-SS-SHk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Dot Cluster View Controller - Dot Cluster-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DotClusterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUe-1h-fCh">
+                                <rect key="frame" x="20" y="502" width="280" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testCluster:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="axc-lJ-jop"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dw-gW-ael" customClass="ClusterView">
+                                <rect key="frame" x="20" y="76" width="280" height="418"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IUe-1h-fCh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="74R-Tw-WfS"/>
+                            <constraint firstAttribute="bottom" secondItem="1dw-gW-ael" secondAttribute="bottom" constant="74" id="7FS-Bd-k4y"/>
+                            <constraint firstItem="IUe-1h-fCh" firstAttribute="top" secondItem="1dw-gW-ael" secondAttribute="bottom" constant="8" symbolic="YES" id="GXG-WH-6Oy"/>
+                            <constraint firstItem="1dw-gW-ael" firstAttribute="leading" secondItem="IUe-1h-fCh" secondAttribute="leading" id="RPX-cH-vjs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IUe-1h-fCh" secondAttribute="bottom" constant="13" id="SSv-6A-Vz1"/>
+                            <constraint firstItem="1dw-gW-ael" firstAttribute="trailing" secondItem="IUe-1h-fCh" secondAttribute="trailing" id="T7J-TT-flE"/>
+                            <constraint firstItem="1dw-gW-ael" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="12" id="VGO-F1-Ozq"/>
+                            <constraint firstAttribute="trailing" secondItem="IUe-1h-fCh" secondAttribute="trailing" constant="20" id="Zvq-NX-irT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dot Cluster" id="e6x-eX-fzU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="ypw-8u-PF2">
+                            <connections>
+                                <action selector="cleanupPoints:" destination="vXZ-lx-hvc" id="4YH-GZ-qP6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="2" id="G1e-Hd-fsV">
+                            <connections>
+                                <segue destination="eDd-K0-5jx" kind="modal" modalTransitionStyle="coverVertical" id="T4W-Za-rHx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clusterView" destination="1dw-gW-ael" id="Mpe-Zl-svL"/>
+                        <outlet property="testBarButtonItem" destination="G1e-Hd-fsV" id="4L2-cO-Jcm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="69"/>
+        </scene>
+        <!--Cluster Change View Controller - Cluster Change-->
+        <scene sceneID="FLf-Z2-73c">
+            <objects>
+                <viewController id="k05-Zs-a76" customClass="ClusterChangeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zE8-bA-8sG"/>
+                        <viewControllerLayoutGuide type="bottom" id="mmU-C7-p4I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qnW-ob-lr8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-zY-ANB">
+                                <rect key="frame" x="113" y="269" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="k05-Zs-a76" eventType="valueChanged" id="MJ2-w8-PVL"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 clusters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlX-Vc-esn">
+                                <rect key="frame" x="20" y="211" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cluster Change" id="5WZ-cv-Zzb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W9b-n3-2qk">
+                            <connections>
+                                <segue destination="tNg-VS-Mph" kind="unwind" unwindAction="unwindToCluster:" id="yXo-xQ-6Ob"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Q7J-Er-lcv">
+                            <connections>
+                                <segue destination="tNg-VS-Mph" kind="unwind" unwindAction="unwindToCluster:" id="xSl-QI-WAd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clustersLabel" destination="wlX-Vc-esn" id="NeV-mE-MxB"/>
+                        <outlet property="doneButton" destination="Q7J-Er-lcv" id="lrQ-Ms-Y1I"/>
+                        <outlet property="stepper" destination="KlW-zY-ANB" id="0Ct-lc-cwc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7CA-Cs-tQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tNg-VS-Mph" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="69"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="woX-hS-51N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mh4-SS-SHk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zfL-Kc-wwr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ii2-kO-a0d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOP-30-9kJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="69"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8EM-8z-9tF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eDd-K0-5jx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oFV-nn-O7S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k05-Zs-a76" kind="relationship" relationship="rootViewController" id="R94-av-Eu7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ix-SX-vkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="69"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
