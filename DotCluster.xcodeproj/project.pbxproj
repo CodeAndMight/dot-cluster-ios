@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3265E9261978FC6E00D738E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3265E9251978FC6E00D738E5 /* README.md */; };
 		3271612D1978F32A00606300 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3271612C1978F32A00606300 /* .gitignore */; };
 		32F64E24196E8FE9001E2E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F64E23196E8FE9001E2E78 /* Foundation.framework */; };
 		32F64E26196E8FE9001E2E78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F64E25196E8FE9001E2E78 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3265E9251978FC6E00D738E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		3271612C1978F32A00606300 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		32F64E20196E8FE9001E2E78 /* DotCluster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotCluster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F64E23196E8FE9001E2E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +125,7 @@
 		32F64E29196E8FE9001E2E78 /* DotCluster */ = {
 			isa = PBXGroup;
 			children = (
+				3265E9251978FC6E00D738E5 /* README.md */,
 				32F64E64196EBFE6001E2E78 /* Model */,
 				32F64E60196EAED1001E2E78 /* UI */,
 				32F64E32196E8FE9001E2E78 /* AppDelegate.h */,
@@ -281,6 +284,7 @@
 			files = (
 				3271612D1978F32A00606300 /* .gitignore in Resources */,
 				32F64E3C196E8FE9001E2E78 /* Images.xcassets in Resources */,
+				3265E9261978FC6E00D738E5 /* README.md in Resources */,
 				32F64E2E196E8FE9001E2E78 /* InfoPlist.strings in Resources */,
 				32F64E37196E8FE9001E2E78 /* Main.storyboard in Resources */,
 			);
